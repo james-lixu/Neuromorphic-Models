@@ -17,6 +17,7 @@ time    = np.arange(0, T*1e-3 + dt*1e-3, dt*1e-3)  # Time array
 Vm      = np.ones(len(time))*vRest*1e-3            # Membrane voltage array
 tau_m   = Rm*1e3 * Cm*1e-6                         # Time constant 
 spikes  = []                                       # Spikes timings
+print(tau_m)
 
 stim = I*1e-3 * signal.windows.triang(len(time))   # Triangular stimulation pattern
 

@@ -9,7 +9,7 @@ vRest   = -70   # Resting potential        [mV]
 Rm      = 1     # Membrane Resistance      [kOhm]
 Cm      = 5     # Capacitance              [uF]
 tau_ref = 1     # Repreactory Period       [mSec]
-vTh     = -40   # Spike threshond          [mV]
+vTh     = -40   # Spike threshold          [mV]
 I       = 0.2   # Current stimulus         [mA]
 vSpike  = 50    # Spike voltage            [mV]
 

@@ -1,25 +1,53 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-x  = 5
-y  = 140
+x  = 4.1
+y  = 108
 
-titles = ['Regular Spiking', 'Chattering', 'Fast spiking']
-a  = [0.02, 0.02, 0.1]
-b  = [0.2 , 0.2 , 0.2]
-c  = [-65, -50  , -65]
-d  = [8   , 2   , 2  ]
+# titles = ['Regular Spiking', 'Chattering', 'Fast Spiking', 'Intrinsically Bursting','Low-Threshold Spiking']
+# a  = [0.02, 0.02, 0.1, 0.02, 0.02]
+# b  = [0.2 , 0.2 , 0.2, 0.2 ,0.25]
+# c  = [-65 , -50 , -65, -55 , -65]
+# d  = [8   , 2   , 2  , 5   , 2]
 
-v0 = -70         # Resting potential        [mV]
-T       = 200    # Simulation time          [mSec]
-dt      = 0.25   # Simulation time interval [mSec]
 
-time    = np.arange(0, T + dt, dt)  # Time array
+# v0 = -70    # Resting potential        [mV]
+# T = 200     # Simulation time          [mSec]
+# dt = 0.25   # Simulation time interval [mSec]
+
+# #VALUES FOR THALAMO -87mV
+# titles = ['Thalamo-Cortical; -63 mV', 'Thalamo-Cortical; -87 mV']
+# a  = [0.02, 0.02]
+# b  = [0.25, 0.25]
+# c  = [-65 , -65]
+# d  = [0.05, 0.05]
+
+# v0 = -87    # Resting potential        [mV]
+# T = 200     # Simulation time          [mSec]
+# dt = 0.25   # Simulation time interval [mSec]
+
+
+#VALUES FOR RESONATOR 
+titles = ['Resonator']
+
+a = [0.1]
+b = [-0.1]
+c = [-65]
+d = [8]
+
+v0 = -70    # Resting potential        [mV]
+T = 200     # Simulation time          [mSec]
+dt = 0.25   # Simulation time interval [mSec]
+
+time = np.arange(0, T + dt, dt)  # Time array
 
 stim = np.zeros(len(time))
 for i,t in enumerate(stim):
     if i > 20:
-        stim[i] = 15
+        stim[i] = 1
+        stim[400:410] = 8
+    # else:
+    #     stim[i] = -1   #Negative stim for 20ms (THALAMO-CORTICAL -87)
 
 trace = np.zeros((2,len(time))) # Tracing du and dv
 

@@ -16,8 +16,8 @@ class HHModel:
         def setInfiniteState(self):
             self.state = self.alpha / (self.alpha + self.beta)
 
-    ENa, EK, EKleak = 115, -100, 10.6
-    gNa, gK, gKleak = 120, 36, 0.3
+    ENa, EK, EKleak = 115, -12, 10.6   #Original values: 115, -12, 10.6 
+    gNa, gK, gKleak = 70, 20, 0.7      #Original 120, 36, 0.3
     m, n, h = Gate(), Gate(), Gate()
     Cm = 1
 

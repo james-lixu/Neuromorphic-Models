@@ -17,7 +17,7 @@ class HHModel:
             self.state = self.alpha / (self.alpha + self.beta)
 
     ENa, EK, EKleak = 115, -12, 10.6   #Original values: 115, -12, 10.6 
-    gNa, gK, gKleak = 70, 20, 0.7      #Original 120, 36, 0.3
+    gNa, gK, gKleak = 150, 50, 0.3      #Original 120, 36, 0.3
     m, n, h = Gate(), Gate(), Gate()
     Cm = 1
 
